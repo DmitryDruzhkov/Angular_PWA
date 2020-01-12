@@ -25,5 +25,20 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "headlines",
+      "urls": [
+        "https://newsapi.org/**",
+        "https://www.techiediaries.com/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "1d",
+        "timeout": "5s",
+        "strategy": "freshness"
+      }
+    }
   ]
 }
