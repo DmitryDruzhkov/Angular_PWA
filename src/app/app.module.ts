@@ -9,6 +9,7 @@ import { ApiService } from './services/api.service';
 import { MatToolbarModule, MatCardModule, MatButtonModule } from '@angular/material';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PwaService } from './services/pwa-service.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { environment } from '../environments/environment';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
-    ApiService
+    ApiService,
+    PwaService
   ],
   bootstrap: [AppComponent]
 })
